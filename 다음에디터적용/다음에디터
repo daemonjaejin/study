@@ -1,0 +1,28 @@
+<form id="frmAddAdmin" name="tx_editor_form" method="post" action="/board/notice/modify/process" enctype="multipart/form-data">
+
+ Editor.modify({
+        //"content": document.getElementById("content") /* 내용 문자열, 주어진 필드(textarea) 엘리먼트 */
+        "content": "${result.content!''}" /* 내용 문자열, 주어진 필드(textarea) 엘리먼트 */
+    });
+
+if(content.length > 2000){
+            alert("html구조 포함 2000자 내로 적어주세요");
+            return false;
+        }
+
+        // 본문 내용을 필드를 생성하여 값을 할당하는 부분
+        var textarea = document.createElement('textarea');
+        textarea.name = 'content';
+        textarea.value = content;
+        textarea.style.display = 'none';
+        form.createField(textarea);
+
+소스분석
+
+- form name 변경
+
+- 데이터 불러와서 넣기
+
+- 저장 시, 길이 체크 및 textarea 숨기기
+- submit 전, Editor.save() 호출하여, 저장해야 한다.
+- css 이미지 경로, 일괄 수정
