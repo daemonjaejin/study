@@ -1,0 +1,4 @@
+html
+<script type="text/javascript" src="http://jsgetip.appspot.com"></script>
+<script src="${rc.contextPath}/static/front/js/jquery.min.js"></script>
+<script src="${rc.contextPath}/static/front/js/log/log.js"></script>
