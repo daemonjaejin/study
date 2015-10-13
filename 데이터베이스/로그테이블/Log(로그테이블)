@@ -1,0 +1,15 @@
+CREATE TABLE `hornetdb`.`Log` (
+  `logNo` INT(11) NOT NULL AUTO_INCREMENT COMMENT '로그번호',
+  `userNo` INT(10) NULL COMMENT '사용자번호',
+  `ip` VARCHAR(20) NULL COMMENT '인터넷프로토콜',
+  `referer` VARCHAR(512) NULL COMMENT '이전페이지주소',
+  `url` VARCHAR(512) NULL COMMENT '페이지주소',
+  `platform` VARCHAR(100) NULL COMMENT '플랫폼',
+  `browserName` VARCHAR(100) NULL COMMENT '브라우저명',
+  `browserCodeName` VARCHAR(100) NULL COMMENT '브라우저코드명',
+  `browserVersion` VARCHAR(512) NULL COMMENT '브라우저버전',
+  `browserLanguage` VARCHAR(10) NULL COMMENT '브라우저언어',
+  `browserOnline` VARCHAR(10) NULL COMMENT '브라우저온라인여부',
+  `cookiesEnabled` VARCHAR(10) NULL COMMENT '쿠키사용여부',
+  `insertDate` DATETIME NULL COMMENT '입력일',
+  PRIMARY KEY (`logNo`)  COMMENT '');
