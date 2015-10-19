@@ -1,0 +1,21 @@
+예제)
+
+/*q = "(itemContent:\"" + queryParam.getQ() + "\"^20 OR storeName:\"" + queryParam.getQ() + "\" OR tags:\""
+                    + queryParam.getQ() + "\" OR memo:\"" + queryParam.getQ() + "\" OR itemName:\""
+                    + queryParam.getQ() + "\")";*/ /* 토이앤맘대구 검색 안됨 */
+            /*q = "(itemContent:" + queryParam.getQ() + "^20 OR storeName:" + queryParam.getQ() + " OR tags:"
+                    + queryParam.getQ() + " OR memo:" + queryParam.getQ() + " OR itemName:"
+                    + queryParam.getQ() + ")";*/ /* 토이앤맘대구 검색 됨 */
+            /*q = "(itemContent:\"" + queryParam.getQ() + "\"^20 OR storeName:\"" + queryParam.getQ() + "\" OR tags:\""
+                    + queryParam.getQ() + "\" OR memo:\"" + queryParam.getQ() + "\" OR itemName:\""
+                    + queryParam.getQ() + "\" OR itemContent:" + queryParam.getQ() + "^20 OR storeName:" + queryParam.getQ() + " OR tags:"
+                    + queryParam.getQ() + " OR memo:" + queryParam.getQ() + " OR itemName:"
+                    + queryParam.getQ() + ")";*/ /* 토이앤맘대구 검색 됨 */
+            q = "(itemContent:\'" + queryParam.getQ() + "\'^20 OR storeName:\'" + queryParam.getQ() + "\' OR tags:\'"
+                    + queryParam.getQ() + "\' OR memo:\'" + queryParam.getQ() + "\' OR itemName:\'"
+                    + queryParam.getQ() + "\')"; /* 토이앤맘대구 검색 됨 */
+
+내용)
+
+질의시 쌍따옴표일때, 해당 문구는 질의가 안됨
+제거 또는 제거한 문구 추가 또는 “ -> ‘ 로 변경 후에는 사용 가능함
