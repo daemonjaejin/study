@@ -1,0 +1,5 @@
+Edit Configurations -> Deployment -> +클릭 -> Artifact ->
+war 와 war exploded 두개가 있다.
+war를 선택하면 redeploy와 restart server 두개만 나온다.
+war exploded를 선택하면 update resources, update classes and resources, redeploy, restart server
+모두 선택이 된다.
